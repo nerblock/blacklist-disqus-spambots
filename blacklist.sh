@@ -1,5 +1,9 @@
 #!/bin/bash
 
+DISQUS_FORUM_SHORTNAME="put your Disqus forum's shortname here"
+DISQUS_API_KEY="put your public Disqus API key here"
+DISQUS_ACCESS_TOKEN="put your Disqus API access token here"
+
 if [ -z "$1" ]
     then
         echo
@@ -10,18 +14,13 @@ if [ -z "$1" ]
         exit
 fi
 
-SPAMMER_USERIDS="$1"
-DISQUS_FORUM_SHORTNAME="put your Disqus forum's shortname here"
-DISQUS_API_KEY="put your public Disqus API key here"
-DISQUS_ACCESS_TOKEN="put your Disqus API access token here"
+echo
+echo "Blacklisting of spammers started, please wait... (will take ~2 minutes)"
+echo
 
 i=1
 count=1
 users=""
-
-echo
-echo "Blacklisting of spammers started, please wait... (will take ~2 minutes)"
-echo
 
 while IFS= read -r line
 do
@@ -38,7 +37,7 @@ do
         ((i=i+1))
     fi
     ((count=count+1))
-done < "$SPAMMER_USERIDS"
+done < "$1"
 
 echo
 echo "All finished. Total spammers added to blacklist: ${count}"
