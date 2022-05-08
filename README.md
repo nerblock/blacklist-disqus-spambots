@@ -1,5 +1,11 @@
 # Mass blacklist disqus spambots
 
+This script is for mass banning the upvoting spambots from a specified Disqus forum.
+
+You need a linux terminal running `bash` to execute this script. Also make sure `curl` is installed.
+
+Usage:
+
 1. download the files to a directory
 2. modify `blacklist.sh` in the following places:
    ```
