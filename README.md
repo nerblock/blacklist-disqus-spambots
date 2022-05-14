@@ -1,3 +1,7 @@
+# Update 22.05.14:
+
+**Disqus removed all userids listed in the csv files. The repo is now obsolete.**
+
 # Mass blacklist disqus spambots
 
 This script is for mass banning the upvoting spambots from a specified Disqus forum.
